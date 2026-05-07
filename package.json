@@ -1,0 +1,22 @@
+{
+  "name": "student-sign-in-said",
+  "version": "1.0.0",
+  "private": true,
+  "description": "student sign in",
+  "license": "ISC",
+  "author": "Said",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "sequelize": "^5.22.5",
+    "tedious": "^19.2.1"
+  },
+  "devDependencies": {
+    "sqlite3": "^6.0.1"
+  }
+}
