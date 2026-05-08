@@ -4,10 +4,11 @@ const createStudentModel = require('./student.js') // this will be referring the
 
 const env = process.env.NODE_ENV || "development" // we are creating an environment variable to be set into the computer, and it will run through the computer/server. It'll read through the value.
 
+const dbPassword = process.env.DB_PASSWORD
 // this code will run through the development section of the config.json to find this variable through different development such as; Azure. Controlling the application.
 
 const config = configJson[env] // if you're running through your computer, if there isn't node_ENV, it will use the default value of the index.js section of the code. It will also read the config of the production or development.
-
+config.password = dbPassword
 const sequelize = new Sequelize(config) // setting up a new sequelize as part of the config.
 
 const database = { // reading out the two sequelize sections through the database.

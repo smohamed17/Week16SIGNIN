@@ -4,9 +4,15 @@
     "dialect": "sqlite"
   },
   "production": {
-    "username": "YOUR_USERNAME",
-    "host": "YOUR_DATABASE_SEVVER.database.windows.net",
-    "database": "YOUR_DATABASE",
-    "dialect": "mssql"
+    "username": "said",
+    "host": "said-student-signin-server.database.windows.net",
+    "database": "signin-student-database",
+    "dialect": "mssql",
+    "dialectOptions": {
+        "options": {
+          "encrypt": true,
+          "trustServerCertificate": false
+        }
+    }
   }
 }

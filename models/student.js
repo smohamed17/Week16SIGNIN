@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => { // we are creating a function defin
             default: false // this will be the default setting when webpage first appears for the student.
         }
     })// databases cares about what type of data you're typing and presenting the datatypes properly.
-    Student.sync( { force: false } ).then(() => {
+    Student.sync( { force: true } ).then(() => {
         console.log('Student synced!'); // if the student is fully synced into the database, it will appear with a message on the console log.
     })// returning a promise.
 

@@ -30,11 +30,9 @@ router.patch('/students/:id', function (req, res, next) {
     const updatedStudent = req.body // updating the student in real time.
     console.log(updatedStudent) // using the console.log to capture the updatedStudent const.
     Student.update(updatedStudent, { where: { id: studentID } }).then( (result) => { // this will then use the location of the id and send out an 'ok' to the request.
-        res.send('ok') // it will match up the data.
-
         const rowModified = result[0] // if a row was changed during the updated student option. it will create a change.
         if (rowModified === 1) {
-            return res.send('ok')
+            return res.send('ok') // it will match up the data.
         } else { // it will not exist in the student update list.
             return res.status(404).send('Could not find student')
         }
