@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => { // we are creating a function defin
             }
         },
         present:{
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.BOOLEAN, // this is a boolean because of the true or false feature.
             allowNull: false,
             default: false // this will be the default setting when webpage first appears for the student.
         }
