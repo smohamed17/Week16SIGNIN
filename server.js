@@ -8,7 +8,7 @@ const staticFilePath = path.join(__dirname, 'clients', 'dist') // it will join t
 const staticFiles = express.static(staticFilePath)
 app.use('/',staticFiles) // this will serve the static files from the vue app.
 
-app.use(express.json())
+app.use(express.json()) // this will result in express.json being used in the dist feature.
 
 app.use('/api', apiRouter) //using the apiRouter.
 
